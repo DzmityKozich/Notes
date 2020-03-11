@@ -2,7 +2,7 @@
 <form [formGroup]="form" mat-dialog-content (ngSubmit)="onSubmit(form.value)" novalidate>
   <mat-form-field>
     <mat-label>Name</mat-label>
-    <input matInput name="name" placeholder="What is you're name?" formControlName="name">
+    <input matInput name="name" placeholder="What is your name?" formControlName="name">
     <mat-error *ngIf="form.controls['name'].invalid && !form.controls['name'].hasError('required')">
       Please enter a valid name!
     </mat-error>
