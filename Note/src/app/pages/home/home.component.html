@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="form-group">
+    <div class="form__group">
+      <input class="form__input" type="text" [(ngModel)]='note.title' placeholder="Title">
+    </div>
+
+    <div>
+      <textarea class="form__input" #textarea autosize [(ngModel)]='note.text' maxlength="200"
+        placeholder="Text"></textarea>
+    </div>
+
+    <button class="btn" (click)="saveNote()">Save</button>
+
+  </div>
+
+  <div class="note">
+    <div *ngFor="let n of notes" [style.backgroundColor]="n.color" [@flyInOut]="'in'">
+      <span class="color1" (click)="color1(n)"></span>
+      <span class="color2" (click)="color2(n)"></span>
+      <span class="color3" (click)="color3(n)"></span>
+      <span class="color4" (click)="color4(n)"></span>
+      <span class="color5" (click)="color5(n)"></span>
+      <span class="color6" (click)="color6(n)"></span>
+      <div>
+        <input type="text" [(ngModel)]="n.title" class="title">
+      </div>
+      <div>
+        <pre><textarea [(ngModel)]="n.text" class="text" autosize></textarea></pre>
+      </div>
+      <div class="actions">
+        <!-- <i class="fas fa-save actions__element"></i> -->
+        <i class="fas fa-check actions__element" (click)="delete(n)" [title]="'Done'"></i>
+        <i class="far fa-trash-alt actions__element" (click)="delete(n)" [title]="'Delete'"></i>
+      </div>
+    </div>
+  </div>
+</div>

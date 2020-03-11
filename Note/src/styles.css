@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(214, 85, 85);
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

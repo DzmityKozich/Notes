@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Sign in</h1>
+<form [formGroup]="signInForm" mat-dialog-content (ngSubmit)="onSubmit(signInForm.value)" novalidate>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput name="email" formControlName="email">
+    <mat-error *ngIf="signInForm.controls['email'].hasError('email') && !signInForm.controls['email'].hasError('required')">
+      Please inter valid email!
+    </mat-error>
+    <mat-error *ngIf="signInForm.controls['email'].hasError('required')">
+      Email is <strong>required</strong>!
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput name="password" formControlName="password">
+    <mat-error *ngIf="signInForm.controls['password'].invalid && !signInForm.controls['password'].hasError('required')">
+      Please enter valid password!
+    </mat-error>
+    <mat-error *ngIf="signInForm.controls['password'].hasError('required')">
+      Please enter password!
+    </mat-error>
+  </mat-form-field>
+  <div mat-doalog-actions>
+    <app-button-share buttonType="submit" buttonName="Sign in" buttonStyle="btn-white"></app-button-share>
+    <app-button-share buttonName="Close" buttonStyle="btn-white" (click)="close()"></app-button-share>
+  </div>
+</form>

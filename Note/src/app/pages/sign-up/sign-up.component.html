@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Sign up</h1>
+<form [formGroup]="form" mat-dialog-content (ngSubmit)="onSubmit(form.value)" novalidate>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput name="name" placeholder="What is you're name?" formControlName="name">
+    <mat-error *ngIf="form.controls['name'].invalid && !form.controls['name'].hasError('required')">
+      Please enter a valid name!
+    </mat-error>
+    <mat-error *ngIf="form.controls['name'].hasError('required')">
+      Plese enter a name!
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput name="email" placeholder="Example@mail.com" formControlName="email">
+    <mat-error *ngIf="form.controls['email'].hasError('email') && !form.controls['email'].hasError('required')">
+      Please enter a valid email address!
+    </mat-error>
+    <mat-error *ngIf="form.controls['email'].hasError('required')">
+      Email is <strong>required</strong>!
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide? 'password' : 'text'" formControlName="password" placeholder="Aa-Zz, 0-9">
+    <button type="button" mat-icon-button matSuffix (click)="toggle()"><i [ngClass]="hide? 'far fa-eye' : 'far fa-eye-slash'"></i></button>
+    <mat-error *ngIf="form.controls['password'].invalid && !form.controls['password'].hasError('required')">
+      Please enter a valid password!
+    </mat-error>
+    <mat-error *ngIf="form.controls['password'].hasError('required')">
+      Please enter a password!
+    </mat-error>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <app-button-share buttonType="submit" buttonName="Submit" buttonStyle="btn-white"></app-button-share>
+    <app-button-share buttonName="Close" buttonStyle="btn-white" (click)="close()"></app-button-share>
+  </div>
+</form>
