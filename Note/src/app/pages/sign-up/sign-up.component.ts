@@ -44,7 +44,7 @@ export class SignUpComponent {
           }
         },
         () => {
-          this.openSnackBar('Success', 'Ok', 2000);
+          this.openSnackBar('Compiled successfully', 'Ok', 2000);
         })
     );
   }
