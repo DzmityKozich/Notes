@@ -1,6 +1,8 @@
+import { InterceptorService } from './interceptor/interceptor.service';
+import { SignInService } from './services/sign-in.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +23,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSliderModule,
     MatFormFieldModule
   ],
-  providers: [],
+  providers: [SignInService, InterceptorService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -34,10 +34,11 @@ export class SignUpComponent {
 
   public saveUser(user: User): void {
     this.subscribtions.push(this.userService.saveUser(user)
-      .subscribe(() => {
-        this.refreshUser();
-        this.close();
-      },
+      .subscribe(
+        () => {
+          this.refreshUser();
+          this.close();
+        },
         (err) => {
           if (err.status === 400) {
             this.openSnackBar('This user is exist!', 'Ok', 2500);
@@ -45,7 +46,8 @@ export class SignUpComponent {
         },
         () => {
           this.openSnackBar('Compiled successfully', 'Ok', 2000);
-        })
+        }
+      )
     );
   }
 

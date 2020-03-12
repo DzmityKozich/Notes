@@ -1,3 +1,5 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { StorageService } from './../../services/storage.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Component } from '@angular/core';
 import { SignUpComponent } from 'src/app/pages/sign-up/sign-up.component';
@@ -10,7 +12,9 @@ import { SignInComponent } from 'src/app/pages/sign-in/sign-in.component';
 })
 export class NavbarComponent {
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog,
+              private storage: StorageService,
+              private snackBar: MatSnackBar) { }
 
   public openSignUpDialog(): void {
     this.matDialog.open(SignUpComponent, {
@@ -24,6 +28,15 @@ export class NavbarComponent {
       width: '500px',
       height: '330px'
     });
+  }
+
+  public logout(): void {
+    this.storage.clearToken();
+    this.openSnackBar('Complited successfully!', 'Ok', 1500);
+  }
+
+  public openSnackBar(message: string, action: string, time: number): void {
+    this.snackBar.open(message, action, { duration : time });
   }
 
 }
