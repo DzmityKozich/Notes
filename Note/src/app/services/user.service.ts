@@ -16,6 +16,10 @@ export class UserService {
     return this.http.get<User[]>(this.path);
   }
 
+  public getUserRoleByEmail(email: string): Observable<number> {
+    return this.http.get<number>(this.path + '/' + email);
+  }
+
   public saveUser(user: User): Observable<User> {
     return this.http.post<User>(this.path, user);
   }
@@ -23,4 +27,5 @@ export class UserService {
   public deleteUser(user: User): Observable<void> {
     return this.http.delete<void>(this.path + '/' + user.idUser);
   }
+
 }

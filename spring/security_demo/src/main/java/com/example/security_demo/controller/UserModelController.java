@@ -25,6 +25,11 @@ public class UserModelController {
         return userModelService.getAllUsers();
     }
 
+    @GetMapping("/{email}")
+    private Long getUserRoleByEmail(@PathVariable String email){
+        return userModelService.getUserByEmail(email).getRole().getIdRole();
+    }
+
     @PostMapping("")
     private ResponseEntity saveUser(@RequestBody UserModel userModel){
         if(userModel != null && validatorService.validator(userModel, getAllUsers())) {

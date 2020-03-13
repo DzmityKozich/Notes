@@ -46,6 +46,7 @@ export class SignInComponent {
         () => {
           this.openSnackBar('Complited successfully!', 'Ok', 2000);
           this.close();
+          window.location.reload();
         }
       )
     );
