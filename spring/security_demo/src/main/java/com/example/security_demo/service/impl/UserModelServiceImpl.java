@@ -3,7 +3,6 @@ package com.example.security_demo.service.impl;
 import com.example.security_demo.auth.AuthUser;
 import com.example.security_demo.models.UserModel;
 import com.example.security_demo.service.UserModelService;
-import com.example.security_demo.service.ValidatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;

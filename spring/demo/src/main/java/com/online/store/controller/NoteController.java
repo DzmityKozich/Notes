@@ -18,9 +18,9 @@ public class NoteController {
         return noteService.getAllNotes();
     }
 
-    @RequestMapping(value = "/user/{email}", method = RequestMethod.GET)
-    private List<Note> getAllNotesByUserId(@PathVariable String email){
-        return noteService.getAllNotesByUserEmail(email);
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
+    private List<Note> getAllNotesByUserId(@PathVariable Long id){
+        return noteService.getAllNotesByIdUser(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)

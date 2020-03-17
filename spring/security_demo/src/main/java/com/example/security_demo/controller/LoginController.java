@@ -1,5 +1,6 @@
 package com.example.security_demo.controller;
 
+import com.example.security_demo.dto.CurrentUserDto;
 import com.example.security_demo.jwt.JwtTokenProvider;
 import com.example.security_demo.models.UserLogin;
 import com.example.security_demo.models.UserModel;
@@ -52,10 +53,10 @@ public class LoginController {
 
             String token = jwtTokenProvider.createToken(username, userModel.getRole());
 
+            CurrentUserDto currentUserDto = new CurrentUserDto(userModel);
             Map<Object, Object> response = new HashMap<>();
-            response.put("email", username);
+            response.put("currentUser", currentUserDto);
             response.put("token", token);
-            response.put("role", userModel.getRole().getIdRole());
 
             return ResponseEntity.ok(response);
 

@@ -36,12 +36,11 @@ export class SignInComponent {
       .subscribe(
         arg => {
           this.token = arg;
+          // console.log(arg);
           this.storage.setToken(this.token);
         },
         (err) => {
-          if (err.status === '403') {
             this.openSnackBar('Check your email and password!', 'Ok', 2500);
-          }
         },
         () => {
           this.openSnackBar('Complited successfully!', 'Ok', 2000);

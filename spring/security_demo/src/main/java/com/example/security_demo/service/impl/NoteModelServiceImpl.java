@@ -26,19 +26,19 @@ public class NoteModelServiceImpl implements NoteModelService {
     @Override
     public NoteModel saveNote(NoteModel note) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backend + "/notes", note, NoteModel.class).getBody();
+        return restTemplate.postForEntity(backend + "/notes/", note, NoteModel.class).getBody();
     }
 
     @Override
     public void deleteNoteById(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.delete(backend + id);
+        restTemplate.delete(backend + "/notes/" + id);
     }
 
     @Override
-    public List<NoteModel> getAllNotesByUserEmail(String email) {
+    public List<NoteModel> getAllNotesByIdUser(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        NoteModel[] noteModels = restTemplate.getForObject(backend + "/notes/user/" + email, NoteModel[].class);
+        NoteModel[] noteModels = restTemplate.getForObject(backend + "/notes/user/" + id, NoteModel[].class);
         return noteModels == null ? Collections.emptyList() : Arrays.asList(noteModels);
     }
 }

@@ -35,7 +35,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public List<Note> getAllNotesByUserEmail(String email) {
-        return noteRepository.findAllByUser(userRepository.findByEmail(email));
+    public List<Note> getAllNotesByIdUser(Long id) {
+        return noteRepository.findAllByUser(userRepository.findByIdUser(id));
     }
 }

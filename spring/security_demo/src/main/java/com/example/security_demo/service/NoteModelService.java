@@ -8,5 +8,5 @@ public interface NoteModelService {
     List<NoteModel> getAllNotes();
     NoteModel saveNote(NoteModel note);
     void deleteNoteById(Long id);
-    List<NoteModel> getAllNotesByUserEmail(String email);
+    List<NoteModel> getAllNotesByIdUser(Long id);
 }

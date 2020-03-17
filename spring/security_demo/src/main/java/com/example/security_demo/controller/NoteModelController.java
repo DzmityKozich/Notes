@@ -3,8 +3,6 @@ package com.example.security_demo.controller;
 import com.example.security_demo.models.NoteModel;
 import com.example.security_demo.service.NoteModelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Role;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,13 +19,13 @@ public class NoteModelController {
         return noteModelService.getAllNotes();
     }
 
-    @GetMapping("/user/{email}")
-    private List<NoteModel> getAllNotesByUserId(@PathVariable String email){
-        return noteModelService.getAllNotesByUserEmail(email);
+    @GetMapping("/user/{id}")
+    private List<NoteModel> getAllNotesByIdUser(@PathVariable Long id){
+        return noteModelService.getAllNotesByIdUser(id);
     }
 
     @PostMapping("")
-    private NoteModel saveNote(NoteModel note){
+    private NoteModel saveNote(@RequestBody NoteModel note){
         return noteModelService.saveNote(note);
     }
 

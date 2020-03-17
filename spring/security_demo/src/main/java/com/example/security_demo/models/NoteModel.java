@@ -1,5 +1,6 @@
 package com.example.security_demo.models;
 
+import com.example.security_demo.dto.CurrentUserDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -9,11 +10,11 @@ public class NoteModel {
     private String title;
     private String text;
     private String color;
-    private UserModel user;
+    private CurrentUserDto user;
 
     public NoteModel() { }
 
-    public NoteModel(Long idNote, String title, String text, String color, UserModel user) {
+    public NoteModel(Long idNote, String title, String text, String color, CurrentUserDto user) {
         this.idNote = idNote;
         this.title = title;
         this.text = text;
@@ -53,11 +54,11 @@ public class NoteModel {
         this.color = color;
     }
 
-    public UserModel getUser() {
+    public CurrentUserDto getUser() {
         return user;
     }
 
-    public void setUser(UserModel user) {
+    public void setUser(CurrentUserDto user) {
         this.user = user;
     }
 }

@@ -1,5 +1,7 @@
+import { CurrentUser } from './../../classes/current-user';
+import { StorageService } from './../../services/storage.service';
+import { NoteService } from './../../services/note.service';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { Note } from 'src/app/classes/note';
 import {
@@ -10,6 +12,7 @@ import {
   transition
 } from '@angular/animations';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { IsRoleService } from 'src/app/services/is-role.service';
 
 @Component({
   selector: 'app-home',
@@ -32,24 +35,63 @@ export class HomeComponent implements OnInit {
 
   public notes: Note[] = [];
   public note: Note = new Note();
+  public currentUser: CurrentUser;
   public isAnimation = false;
+  public isAuthorized: boolean;
+  private subscription: Subscription[] = [];
 
-  constructor(private snackBar: MatSnackBar) {
+  constructor(private snackBar: MatSnackBar,
+              private noteService: NoteService,
+              private isRoleService: IsRoleService,
+              private storage: StorageService) {
   }
 
-  public openSnackBar() {
-    this.snackBar.open('Note was deleted!', 'Ok', { duration: 1000 });
+  ngOnInit(): void {
+    this.currentUser = this.storage.getCurrentUser();
+    this.getAllNotesByIdUser();
+    this.isAuthorized = this.isRoleService.isAuthorized();
   }
 
-  public reareshNote(): void {
+  public getAllNotesByIdUser(): void {
+    if (this.isAuthorized) {
+      this.subscription.push(this.noteService.getNotesByIdUser(this.currentUser.idUser)
+        .subscribe(arg => this.notes = arg)
+      );
+    }
+  }
+
+  public refreshNote(): void {
     this.note = new Note();
   }
 
   public saveNote(): void {
     if (this.note.text != null || this.note.title != null) {
-      this.notes.push(this.note);
-      this.reareshNote();
+      this.note.user = this.currentUser;
+      this.subscription.push(this.noteService.saveNote(this.note)
+        .subscribe(
+          () => {
+            this.getAllNotesByIdUser();
+            this.refreshNote();
+          },
+          (err) => this.openSnackBar('Please Sign in!', 'Ok', 3000),
+          () => this.openSnackBar('Note save!', 'Ok', 1500)
+        )
+      );
     }
+  }
+
+  public delete(idNote: number): void {
+    this.subscription.push(this.noteService.deleteNote(idNote)
+      .subscribe(
+        () => this.getAllNotesByIdUser(),
+        (err) => console.log(err),
+        () => this.openSnackBar('Note delete', '', 1500)
+      )
+    );
+  }
+
+  public openSnackBar(message: string, action: string, time: number) {
+    this.snackBar.open(message, action, { duration: time });
   }
 
   public clear(): void {
@@ -79,16 +121,5 @@ export class HomeComponent implements OnInit {
   public color6(n: Note): void {
     n.color = 'rgb(151, 149, 247)';
   }
-
-  public delete(n: Note): void {
-    const index: number = this.notes.indexOf(n);
-    if (index !== -1) {
-      this.notes.splice(index, 1);
-      this.isAnimation = true;
-      this.openSnackBar();
-    }
-  }
-
-  ngOnInit() {}
 
 }

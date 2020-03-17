@@ -26,6 +26,11 @@ public class UserModelController {
     }
 
     @GetMapping("/{email}")
+    private UserModel getUserByEmail(@PathVariable String email){
+        return userModelService.getUserByEmail(email);
+    }
+
+    @GetMapping("/role/{email}")
     private Long getUserRoleByEmail(@PathVariable String email){
         return userModelService.getUserByEmail(email).getRole().getIdRole();
     }

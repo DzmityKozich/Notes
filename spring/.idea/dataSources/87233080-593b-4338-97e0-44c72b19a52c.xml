@@ -1148,7 +1148,6 @@
     <column id="288" parent="281" name="note_color">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="289" parent="281" name="note_usr_id">

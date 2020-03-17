@@ -1,5 +1,5 @@
+import { CurrentUser } from './current-user';
 export class Token {
-  role ?: string;
-  email ?: string;
+  currentUser ?: CurrentUser;
   token ?: string;
 }

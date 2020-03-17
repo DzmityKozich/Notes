@@ -17,7 +17,11 @@ export class UserService {
   }
 
   public getUserRoleByEmail(email: string): Observable<number> {
-    return this.http.get<number>(this.path + '/' + email);
+    return this.http.get<number>(this.path + '/role/' + email);
+  }
+
+  public getUserByEmail(email: string): Observable<User> {
+    return this.http.get<User>(this.path + '/' + email);
   }
 
   public saveUser(user: User): Observable<User> {

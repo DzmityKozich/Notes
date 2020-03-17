@@ -15,8 +15,8 @@
 
   </div>
 
-  <div class="note">
-    <div *ngFor="let n of notes" [style.backgroundColor]="n.color" [@flyInOut]="'in'">
+  <div class="note" *ngIf="isAuthorized">
+    <div *ngFor="let n of notes" [style.backgroundColor]="n.color" >
       <span class="color1" (click)="color1(n)"></span>
       <span class="color2" (click)="color2(n)"></span>
       <span class="color3" (click)="color3(n)"></span>
@@ -31,8 +31,8 @@
       </div>
       <div class="actions">
         <!-- <i class="fas fa-save actions__element"></i> -->
-        <i class="fas fa-check actions__element" (click)="delete(n)" [title]="'Done'"></i>
-        <i class="far fa-trash-alt actions__element" (click)="delete(n)" [title]="'Delete'"></i>
+        <i class="fas fa-check actions__element" (click)="delete(n.idNote)" [title]="'Done'"></i>
+        <i class="far fa-trash-alt actions__element" (click)="delete(n.idNote)" [title]="'Delete'"></i>
       </div>
     </div>
   </div>
