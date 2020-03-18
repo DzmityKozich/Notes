@@ -17,12 +17,12 @@
 
   <div class="note" *ngIf="isAuthorized">
     <div *ngFor="let n of notes" [style.backgroundColor]="n.color" >
-      <span class="color1" (click)="color1(n.idNote)"></span>
-      <span class="color2" (click)="color2(n.idNote)"></span>
-      <span class="color3" (click)="color3(n.idNote)"></span>
-      <span class="color4" (click)="color4(n.idNote)"></span>
-      <span class="color5" (click)="color5(n.idNote)"></span>
-      <span class="color6" (click)="color6(n.idNote)"></span>
+      <span class="color1" (click)="color1(n)"></span>
+      <span class="color2" (click)="color2(n)"></span>
+      <span class="color3" (click)="color3(n)"></span>
+      <span class="color4" (click)="color4(n)"></span>
+      <span class="color5" (click)="color5(n)"></span>
+      <span class="color6" (click)="color6(n)"></span>
       <div>
         <input type="text" [(ngModel)]="n.title" class="title">
       </div>

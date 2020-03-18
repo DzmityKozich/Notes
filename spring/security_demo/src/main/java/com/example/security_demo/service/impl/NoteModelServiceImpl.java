@@ -24,6 +24,12 @@ public class NoteModelServiceImpl implements NoteModelService {
     }
 
     @Override
+    public NoteModel getNoteById(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject(backend + "/notes/" + id, NoteModel.class);
+    }
+
+    @Override
     public NoteModel saveNote(NoteModel note) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.postForEntity(backend + "/notes/", note, NoteModel.class).getBody();

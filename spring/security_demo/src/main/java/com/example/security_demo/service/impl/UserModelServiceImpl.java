@@ -58,7 +58,7 @@ public class UserModelServiceImpl implements UserModelService, UserDetailsServic
             throw new UsernameNotFoundException("User with username: " + username + " not found");
         }
         AuthUser authUser = new AuthUser(userModel);
-        System.out.println(authUser.getAuthorities());
+//        System.out.println(authUser.getAuthorities());
         return authUser;
     }
 

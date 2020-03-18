@@ -25,6 +25,11 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    public Note getNoteById(Long id) {
+        return noteRepository.findByIdNote(id);
+    }
+
+    @Override
     public List<Note> getAllNotesByIdUser(Long id) {
         return noteRepository.findAllByUser(userRepository.findByIdUser(id));
     }

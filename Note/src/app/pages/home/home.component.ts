@@ -60,6 +60,14 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  public getNoteById(note: Note): void {
+    this.subscription.push(this.noteService.getNoteById(note.idNote)
+      .subscribe(arg => {
+        this.notes.splice(this.notes.indexOf(note), 1, arg);
+      })
+    );
+  }
+
   public refreshNote(): void {
     this.note = new Note();
   }
@@ -80,9 +88,9 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  public changeColor(id: number, color: string): void {
-    this.subscription.push(this.noteService.changeColor(id, color)
-      .subscribe(() => this.getAllNotesByIdUser())
+  public changeColor(note: Note, color: string): void {
+    this.subscription.push(this.noteService.changeColor(note.idNote, color)
+      .subscribe(() => this.getNoteById(note))
     );
   }
 
@@ -100,28 +108,28 @@ export class HomeComponent implements OnInit {
     this.snackBar.open(message, action, { duration: time });
   }
 
-  public color1(id: number): void {
-    this.changeColor(id, '#ffe555');
+  public color1(note: Note): void {
+    this.changeColor(note, '#ffe555');
   }
 
-  public color2(id: number): void {
-    this.changeColor(id, '#fff');
+  public color2(note: Note): void {
+    this.changeColor(note, '#fff');
   }
 
-  public color3(id: number): void {
-    this.changeColor(id, 'rgb(89, 244, 255)');
+  public color3(note: Note): void {
+    this.changeColor(note, 'rgb(89, 244, 255)');
   }
 
-  public color4(id: number): void {
-    this.changeColor(id, 'rgba(255, 94, 215, 0.808)');
+  public color4(note: Note): void {
+    this.changeColor(note, 'rgba(255, 94, 215, 0.808)');
   }
 
-  public color5(id: number): void {
-    this.changeColor(id, 'rgb(112, 255, 112)');
+  public color5(note: Note): void {
+    this.changeColor(note, 'rgb(112, 255, 112)');
   }
 
-  public color6(id: number): void {
-    this.changeColor(id, 'rgb(151, 149, 247)');
+  public color6(note: Note): void {
+    this.changeColor(note, 'rgb(151, 149, 247)');
   }
 
 }

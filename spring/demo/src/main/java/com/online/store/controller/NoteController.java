@@ -18,6 +18,11 @@ public class NoteController {
         return noteService.getAllNotes();
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    private Note getNoteById(@PathVariable Long id){
+        return noteService.getNoteById(id);
+    }
+
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     private List<Note> getAllNotesByUserId(@PathVariable Long id){
         return noteService.getAllNotesByIdUser(id);

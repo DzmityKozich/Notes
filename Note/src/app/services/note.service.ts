@@ -18,6 +18,10 @@ export class NoteService {
     return this.http.get<Note[]>(this.path + '/user/' + idUser);
   }
 
+  public getNoteById(id: number): Observable<Note> {
+    return this.http.get<Note>(this.path + '/' + id);
+  }
+
   public saveNote(note: Note): Observable<Note> {
     return this.http.post<Note>(this.path, note);
   }
