@@ -12,11 +12,11 @@ public class CurrentUserDto {
     public CurrentUserDto() {
     }
 
-    public CurrentUserDto(Long idUser, String name, String email, Long idRole) {
+    public CurrentUserDto(Long idUser, String name, String email, Long role) {
         this.idUser = idUser;
         this.name = name;
         this.email = email;
-        this.idRole = idRole;
+        this.idRole = role;
     }
 
     public CurrentUserDto(UserModel userModel){

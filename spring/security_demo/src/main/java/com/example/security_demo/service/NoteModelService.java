@@ -7,6 +7,7 @@ import java.util.List;
 public interface NoteModelService {
     List<NoteModel> getAllNotes();
     NoteModel saveNote(NoteModel note);
+    NoteModel changeColor(Long id, String color);
     void deleteNoteById(Long id);
     List<NoteModel> getAllNotesByIdUser(Long id);
 }

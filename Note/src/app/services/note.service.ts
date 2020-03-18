@@ -22,6 +22,10 @@ export class NoteService {
     return this.http.post<Note>(this.path, note);
   }
 
+  public changeColor(id: number, color: string): Observable<Note> {
+    return this.http.post<Note>(this.path + '/color/' + id, color);
+  }
+
   public deleteNote(idNote: number): Observable<void> {
     return this.http.delete<void>(this.path + '/' + idNote);
   }

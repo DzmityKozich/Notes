@@ -29,6 +29,11 @@ public class NoteModelController {
         return noteModelService.saveNote(note);
     }
 
+    @RequestMapping(value = "/color/{id}", method = RequestMethod.POST)
+    private NoteModel changeColor(@PathVariable Long id, @RequestBody String color){
+        return noteModelService.changeColor(id, color);
+    }
+
     @DeleteMapping("/{id}")
     private void deleteNote(@PathVariable Long id){
         noteModelService.deleteNoteById(id);

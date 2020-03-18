@@ -11,4 +11,5 @@ import java.util.Optional;
 @Repository
 public interface NoteRepository extends JpaRepository<Note, Long> {
     List<Note> findAllByUser(User user);
+    Note findByIdNote(Long id);
 }

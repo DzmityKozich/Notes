@@ -25,6 +25,18 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    public List<Note> getAllNotesByIdUser(Long id) {
+        return noteRepository.findAllByUser(userRepository.findByIdUser(id));
+    }
+
+    @Override
+    public Note changeColor(Long id, String color) {
+        Note note  = noteRepository.findByIdNote(id);
+        note.setColor(color);
+        return saveNote(note);
+    }
+
+    @Override
     public Note saveNote(Note note) {
         return noteRepository.save(note);
     }
@@ -34,8 +46,5 @@ public class NoteServiceImpl implements NoteService {
         noteRepository.deleteById(id);
     }
 
-    @Override
-    public List<Note> getAllNotesByIdUser(Long id) {
-        return noteRepository.findAllByUser(userRepository.findByIdUser(id));
-    }
+
 }

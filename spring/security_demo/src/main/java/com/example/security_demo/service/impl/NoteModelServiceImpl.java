@@ -30,6 +30,12 @@ public class NoteModelServiceImpl implements NoteModelService {
     }
 
     @Override
+    public NoteModel changeColor(Long id, String color) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.postForEntity(backend + "/notes/color/" + id, color, NoteModel.class).getBody();
+    }
+
+    @Override
     public void deleteNoteById(Long id) {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.delete(backend + "/notes/" + id);

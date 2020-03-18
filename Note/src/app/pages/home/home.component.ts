@@ -47,9 +47,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isAuthorized = this.isRoleService.isAuthorized();
     this.currentUser = this.storage.getCurrentUser();
     this.getAllNotesByIdUser();
-    this.isAuthorized = this.isRoleService.isAuthorized();
   }
 
   public getAllNotesByIdUser(): void {
@@ -80,6 +80,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  public changeColor(id: number, color: string): void {
+    this.subscription.push(this.noteService.changeColor(id, color)
+      .subscribe(() => this.getAllNotesByIdUser())
+    );
+  }
+
   public delete(idNote: number): void {
     this.subscription.push(this.noteService.deleteNote(idNote)
       .subscribe(
@@ -94,32 +100,28 @@ export class HomeComponent implements OnInit {
     this.snackBar.open(message, action, { duration: time });
   }
 
-  public clear(): void {
-    this.notes = [];
+  public color1(id: number): void {
+    this.changeColor(id, '#ffe555');
   }
 
-  public color1(n: Note): void {
-    n.color = '#ffe555';
+  public color2(id: number): void {
+    this.changeColor(id, '#fff');
   }
 
-  public color2(n: Note): void {
-    n.color = '#fff';
+  public color3(id: number): void {
+    this.changeColor(id, 'rgb(89, 244, 255)');
   }
 
-  public color3(n: Note): void {
-    n.color = 'rgb(89, 244, 255)';
+  public color4(id: number): void {
+    this.changeColor(id, 'rgba(255, 94, 215, 0.808)');
   }
 
-  public color4(n: Note): void {
-    n.color = 'rgba(255, 94, 215, 0.808)';
+  public color5(id: number): void {
+    this.changeColor(id, 'rgb(112, 255, 112)');
   }
 
-  public color5(n: Note): void {
-    n.color = 'rgb(112, 255, 112)';
-  }
-
-  public color6(n: Note): void {
-    n.color = 'rgb(151, 149, 247)';
+  public color6(id: number): void {
+    this.changeColor(id, 'rgb(151, 149, 247)');
   }
 
 }
