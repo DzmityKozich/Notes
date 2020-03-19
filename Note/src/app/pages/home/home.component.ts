@@ -104,6 +104,15 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  public editNote(note: Note): void {
+    this.subscription.push(this.noteService.saveNote(note)
+      .subscribe(() => {
+        this.getNoteById(note);
+        this.openSnackBar('Edits saved!', '', 1000);
+      })
+    );
+  }
+
   public openSnackBar(message: string, action: string, time: number) {
     this.snackBar.open(message, action, { duration: time });
   }
