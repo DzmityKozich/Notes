@@ -13,6 +13,7 @@ notes, memo, shopping list and to do list. You can add a note, delete it and cha
 * [Angular Material](https://material.angular.io/) - UI component library for Angular
 * [Spring](https://spring.io/) - Java framework
 * [Maven](https://maven.apache.org/) - Dependency Management
+* [JWT](https://jwt.io/) - Way for securely transmitting information between parties as a JSON object.
 
 ## Project status
 This is a working version, but i want add some corretions and function in future.
