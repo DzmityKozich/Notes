@@ -2,7 +2,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from './../../services/user.service';
 import { User } from './../../classes/user';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs/internal/Subscription';
 
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs/internal/Subscription';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnDestroy {
 
   public hide = true;
   public user: User = new User();
@@ -70,5 +70,9 @@ export class SignUpComponent {
 
   public openSnackBar(massage: string, action: string, time: number): void {
     this.snackBar.open(massage, action, { duration: time });
+  }
+
+  ngOnDestroy(): void {
+    this.subscribtions.forEach((sub) => sub.unsubscribe());
   }
 }

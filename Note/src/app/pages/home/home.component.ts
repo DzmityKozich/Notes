@@ -2,7 +2,7 @@ import { CurrentUser } from './../../classes/current-user';
 import { StorageService } from './../../services/storage.service';
 import { NoteService } from './../../services/note.service';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Note } from 'src/app/classes/note';
 import {
   trigger,
@@ -13,6 +13,9 @@ import {
 } from '@angular/animations';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IsRoleService } from 'src/app/services/is-role.service';
+import { Observable } from 'rxjs';
+import { CanComponentDeactivate } from 'src/app/guards/can-deactivate.guard';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +34,7 @@ import { IsRoleService } from 'src/app/services/is-role.service';
     ])
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy, CanComponentDeactivate {
 
   public notes: Note[] = [];
   public note: Note = new Note();
@@ -50,6 +53,11 @@ export class HomeComponent implements OnInit {
     this.isAuthorized = this.isRoleService.isAuthorized();
     this.currentUser = this.storage.getCurrentUser();
     this.getAllNotesByIdUser();
+  }
+
+  @HostListener('window:beforeunload'/*, ['$event']*/)
+  beforeUnloadHander() {
+      return this.canDeactivate();
   }
 
   public getAllNotesByIdUser(): void {
@@ -113,6 +121,14 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  canDeactivate(): Observable<boolean> | boolean {
+    if (this.notes.some(item => item.isEdit === true)) {
+      return window.confirm('Do you want to leave this page?');
+    } else {
+      return true;
+    }
+  }
+
   public openSnackBar(message: string, action: string, time: number) {
     this.snackBar.open(message, action, { duration: time });
   }
@@ -139,6 +155,11 @@ export class HomeComponent implements OnInit {
 
   public color6(note: Note): void {
     this.changeColor(note, 'rgb(151, 149, 247)');
+  }
+
+  ngOnDestroy(): void {
+    this.canDeactivate();
+    this.subscription.forEach((sub) => sub.unsubscribe());
   }
 
 }

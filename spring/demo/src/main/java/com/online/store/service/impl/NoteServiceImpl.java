@@ -1,11 +1,11 @@
 package com.online.store.service.impl;
 
 import com.online.store.entity.Note;
-import com.online.store.entity.User;
 import com.online.store.repository.NoteRepository;
 import com.online.store.repository.UserRepository;
 import com.online.store.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public List<Note> getAllNotesByIdUser(Long id) {
-        return noteRepository.findAllByUser(userRepository.findByIdUser(id));
+        return noteRepository.findAllByUser(userRepository.findByIdUser(id), Sort.by("idNote").descending());
     }
 
     @Override

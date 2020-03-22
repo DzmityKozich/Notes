@@ -7,14 +7,14 @@ import { LoginUser } from './../../classes/loginUser';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { SignUpComponent } from 'src/app/pages/sign-up/sign-up.component';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
-export class SignInComponent {
+export class SignInComponent implements OnDestroy {
 
   public hide = true;
   public loginUser: LoginUser = new LoginUser();
@@ -69,6 +69,10 @@ export class SignInComponent {
 
   public openSnackBar(message: string, action: string, time: number): void {
     this.snackBar.open(message, action, { duration: time });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.forEach((sub) => sub.unsubscribe());
   }
 
 }

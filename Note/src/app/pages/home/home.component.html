@@ -17,6 +17,7 @@
   </div>
 
   <div class="note" *ngIf="isAuthorized">
+    <!-- [@flyInOut]="'in'" -->
     <div *ngFor="let n of notes" [style.backgroundColor]="n.color" >
       <span class="color1" (click)="color1(n)"></span>
       <span class="color2" (click)="color2(n)"></span>
@@ -31,8 +32,6 @@
         <pre><textarea [(ngModel)]="n.text" (ngModelChange)="n.isEdit = true" class="text" autosize #spy></textarea></pre>
       </div>
       <div class="actions">
-        <!-- {{ spy.className }} -->
-        <!-- <i class="fas fa-save actions__element"></i> -->
         <i *ngIf="n.isEdit" class="fas fa-check actions__element" (click)="editNote(n)" [title]="'Save'"></i>
         <i class="far fa-trash-alt actions__element" (click)="delete(n.idNote)" [title]="'Delete'"></i>
       </div>

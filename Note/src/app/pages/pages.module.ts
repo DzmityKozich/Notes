@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { ShareModule } from './../share/share.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -26,6 +27,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     NavbarModule,
     FormsModule,
     ShareModule,
+    RouterModule,
     ReactiveFormsModule,
     AutosizeModule,
     MatSliderModule,
