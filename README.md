@@ -15,4 +15,4 @@ notes, memo, shopping list and to do list. You can add a note, delete it and cha
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [JWT](https://jwt.io/) - JWT is a means of transmitting information between two parties in a compact, verifiable form.
 ## Project status
-This is a working version, but i want add some corretions and function in future.
+This is a working version, but I want add some corretions and function in future.
