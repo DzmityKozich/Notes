@@ -17,7 +17,7 @@
   </div>
 
   <div class="note" *ngIf="isAuthorized">
-    <!-- [@flyInOut]="'in'" -->
+    <!-- [@noteTrigger]="'exist'" -->
     <div *ngFor="let n of notes" [style.backgroundColor]="n.color" >
       <span class="color1" (click)="color1(n)"></span>
       <span class="color2" (click)="color2(n)"></span>

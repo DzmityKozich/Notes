@@ -22,18 +22,21 @@ import { HostListener } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [
-    trigger('flyInOut', [
-      state('in', style({ transform: 'translateX(0)' })),
-      transition(':enter', [
+    trigger('noteTrigger', [
+      state('exist', style({
+        opacity: '1'
+      })),
+      transition('* => exist', [
         style({ opacity: '0' }),
-        animate('.2s')
+        animate('.5s')
       ]),
-      transition(':leave', [
-        animate('.4s', style({ opacity: '0' }))
+      transition('exist => *', [
+        animate('.5s', style({ opacity: '0' }))
       ])
     ])
   ]
 })
+
 export class HomeComponent implements OnInit, OnDestroy, CanComponentDeactivate {
 
   public notes: Note[] = [];

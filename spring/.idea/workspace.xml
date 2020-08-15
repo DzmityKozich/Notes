@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39af0322-aaf4-418c-9230-4b2ad5e9318d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Note/src/app/guards/can-deactivate.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Note/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Note/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/pages/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Note/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/pages/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Note/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Note/src/app/pages/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/pages/sign-in/sign-in.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Note/src/app/pages/sign-up/sign-up.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/pages/sign-up/sign-up.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Note/src/app/pages/sign-up/sign-up.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/src/app/pages/sign-up/sign-up.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/online/store/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/online/store/repository/NoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/online/store/service/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/online/store/service/impl/NoteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,20 +74,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1YR9rmq8WglmpZf3OZ3pMMQ6ruT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -133,33 +120,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:notes@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:notes@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2fc1e533" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:notes@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@622c57ca" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -229,24 +189,44 @@
       <workItem from="1584811214760" duration="180000" />
       <workItem from="1584811404464" duration="203000" />
       <workItem from="1584824778652" duration="1196000" />
+      <workItem from="1584875601435" duration="635000" />
+      <workItem from="1584888384843" duration="2040000" />
+      <workItem from="1584987394316" duration="222000" />
+      <workItem from="1584993172068" duration="281000" />
+      <workItem from="1584994295562" duration="619000" />
+      <workItem from="1585159300523" duration="2147000" />
+      <workItem from="1585410586780" duration="49000" />
+      <workItem from="1585411524578" duration="360000" />
+      <workItem from="1585412144819" duration="583000" />
+      <workItem from="1585413425152" duration="20000" />
+      <workItem from="1585413626711" duration="1130000" />
+      <workItem from="1585576960814" duration="640000" />
+      <workItem from="1586337762036" duration="852000" />
+      <workItem from="1587216301696" duration="190000" />
+      <workItem from="1587216577538" duration="1191000" />
+      <workItem from="1588427139558" duration="26000" />
+      <workItem from="1588499971256" duration="1845000" />
+      <workItem from="1588526219217" duration="751000" />
+      <workItem from="1588589424563" duration="607000" />
+      <workItem from="1588602319176" duration="2080000" />
+      <workItem from="1588611761481" duration="6125000" />
+      <workItem from="1588680769641" duration="5596000" />
+      <workItem from="1588704670726" duration="2075000" />
+      <workItem from="1588849747045" duration="1791000" />
+      <workItem from="1588950228967" duration="71000" />
+      <workItem from="1589376401428" duration="610000" />
+      <workItem from="1592579131208" duration="287000" />
+      <workItem from="1592579562485" duration="71000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="74" key="#Assign_Data_Sources" timestamp="1582914869839">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="74" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1582914869839" />
-    <state x="361" y="74" key="#Inspections" timestamp="1582990693526">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1582990693526" />
     <state x="361" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584026427725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -255,6 +235,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584533585056" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1592579153327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1592579153327" />
     <state x="571" y="281" width="427" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584436106211">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -271,10 +255,6 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="439" y="263" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1584436568534" />
-    <state width="560" height="466" key="DebuggerActiveHint" timestamp="1583570723950">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="560" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1583570723950" />
     <state x="147" y="65" key="DiffContextDialog" timestamp="1584436612927">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -283,38 +263,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584811312746" />
-    <state width="1493" height="510" key="GridCell.Tab.0.bottom" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.0.bottom" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.0.center" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.0.center" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.0.left" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.0.left" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.0.right" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.0.right" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.1.bottom" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.1.bottom" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.1.center" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.1.center" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.1.left" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.1.left" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
-    <state width="1493" height="510" key="GridCell.Tab.1.right" timestamp="1584875629865">
+    <state width="1493" height="510" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
+    <state width="1493" height="510" key="GridCell.Tab.1.right" timestamp="1584897275589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="510" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584875629865" />
+    <state width="1493" height="510" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584897275589" />
     <state width="1493" height="277" key="GridCell.Tab.2.bottom" timestamp="1584735851913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -335,42 +315,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="126" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584436613791" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1583578427411">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583578427411" />
-    <state x="672" y="303" width="315" height="222" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1582914234759">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="672" y="303" width="315" height="222" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1582914234759" />
     <state x="485" y="43" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584294921804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="43" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1584294921804" />
-    <state x="523" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1582914825012">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584888386984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="523" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1582914825012" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584875601285">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584875601285" />
-    <state x="330" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583095871666">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="330" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1583095871666" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584888386984" />
     <state x="209" y="39" key="new project wizard" timestamp="1584721306115">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="39" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1584721306115" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1583936654081">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1583936654081" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583438763379">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583438763379" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
